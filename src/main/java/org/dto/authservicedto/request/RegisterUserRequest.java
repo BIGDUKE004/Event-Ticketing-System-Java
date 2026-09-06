@@ -1,7 +1,8 @@
-package org.dto.authServiceDto.Request;
-import java.util.Random;
+package org.dto.authservicedto.request;
+
 import lombok.Data;
 
+import java.util.Random;
 @Data
 public class RegisterUserRequest {
     String id;
@@ -14,5 +15,5 @@ public class RegisterUserRequest {
         int randomNumber = random.nextInt(1, 16);
         String id = "" + randomNumber;
         this.id = id;
-     }
+    }
 }

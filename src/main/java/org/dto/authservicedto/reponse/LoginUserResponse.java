@@ -1,9 +1,9 @@
-package org.dto.authServiceDto.Response;
+package org.dto.authservicedto.reponse;
 
 import lombok.Data;
 
 @Data
 public class LoginUserResponse {
-    String name;
     String email;
+    boolean isLoggedIn;
 }

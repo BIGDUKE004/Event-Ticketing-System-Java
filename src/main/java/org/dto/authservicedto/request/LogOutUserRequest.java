@@ -1,8 +1,9 @@
-package org.dto.authServiceDto.Request;
+package org.dto.authservicedto.request;
 
 import lombok.Data;
 
 @Data
 public class LogOutUserRequest {
     String email;
+
 }

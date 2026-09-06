@@ -1,4 +1,4 @@
-package org.dto.authServiceDto.Response;
+package org.dto.authservicedto.reponse;
 
 import lombok.Data;
 
