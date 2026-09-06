@@ -3,7 +3,7 @@ package org.data.models;
 import lombok.Data;
 
 @Data
-public class TIcket {
+public class Ticket {
     String id;
     String bookingId;
     String ticketType;
