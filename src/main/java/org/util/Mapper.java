@@ -1,16 +1,16 @@
 package org.util;
 
-import jdk.jfr.Registered;
 import org.data.models.User;
-import org.dto.authServiceDto.Request.RegisterUserRequest;
+import org.dto.authservicedto.request.RegisterUserRequest;
 
 public class Mapper {
-    public User mapToUser(RegisterUserRequest request){
+    public static User mapToUser(RegisterUserRequest registerUserRequest){
         User user = new User();
-        user.setId(request.getId());
-        user.setEmail(request.getEmail());
-        user.setName(request.getName());
-        user.setPassword(request.getPassword());
+        user.setId(registerUserRequest.getId());
+        user.setEmail(registerUserRequest.getEmail());
+        user.setName(registerUserRequest.getName());
+        user.setPassword(registerUserRequest.getPassword());
         return user;
     }
+
 }
