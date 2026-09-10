@@ -47,6 +47,7 @@ public class AuthServiceImplementation implements AuthService{
             throw new IncorrectPasswordException("invalid credentials");
         }
         user.setLoggedIn(true);
+        repository.save(user);
         LoginUserResponse response = new LoginUserResponse();
         response.setEmail(request.getEmail());
         response.setLoggedIn(user.isLoggedIn());
@@ -64,6 +65,7 @@ public class AuthServiceImplementation implements AuthService{
             throw new IncorrectPasswordException("invalid credentials");
         }
         user.setLoggedIn(false);
+        repository.save(user);
         LogOutUserResponse response = new LogOutUserResponse();
         response.setMessage("Log out successful");
         return response;
