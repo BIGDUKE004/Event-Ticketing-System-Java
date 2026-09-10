@@ -1,22 +1,20 @@
-package com.data.models;
+package com.dto.BookingServiceDto.Response;
 
+import com.data.models.BookingItem;
+import com.data.models.Status;
 import lombok.Data;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
-@Document
 @Data
-public class Booking {
-    @Id
+public class UpdateBookingResponse {
     String id;
     String userId;
     String eventId;
     ArrayList<BookingItem> bookings;
-    LocalDateTime  bookingDate;
+    LocalDateTime bookingDate;
     int quantity;
     BigDecimal totalAmount;
     Status status = Status.PENDING;
